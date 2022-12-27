@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+<h1>
+    Введите название камеры и адрес
+</h1>
+<form action="/check_camera/" method="POST">
+    <p>Название<input type="text" name="Name"/></p>
+    <p>Адрес камеры <input type="text" name="Address" size="100"/></p>
+    <p><input type="submit" value="Добавить"/></p>
+</form>
+</body>
+</html>

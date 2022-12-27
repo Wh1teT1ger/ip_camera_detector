@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Camera</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+
+
+            <h2 class="mt-5">IP camera</h2>
+			<form method="post" action="{{ url_for('tasks') }}">
+			<input type="submit" value="Стоп" name="work" />
+			<input type="submit" value="Удалить камеру" name="delete"/>
+			<input type="submit" value="Изменить маску" name="mask" />
+			</form>
+            <img src="{{ url_for('video_feed') }}" height="80%">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
